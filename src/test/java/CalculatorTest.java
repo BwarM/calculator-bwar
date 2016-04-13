@@ -9,33 +9,63 @@ public class CalculatorTest {
    
    @Test
    public void testadd1() {
-    assertEquals("Unexepected error during addition!", 10.0, calc.add(5.0,5.0),0.0d);
-   }
-   
+    assertEquals(10.0, calc.add(5.0,5.0),0.0d);
+    }
    
    @Test
    public void testadd2() {
-    assertEquals("Unexepected error during addition!", 2.0, calc.add(-3.0,5.0),0.0d);
-   }
+    assertEquals(-20.0, calc.add(-10.0,-10.0),0.0d);
+    }
    
-   @After
-   public void after() {
-    System.out.println("After");
-   }
+   @Test
+   public void testadd3() {
+    assertEquals(-2.0, calc.add(5.0,-7.0),0.0d);
+    }
    
-   @Ignore
-   public void ignore() {
-    System.out.println("Ignore");
-   }
+   @Test
+   public void testsub1() {
+    assertEquals(-2.0, calc.sub(5.0,7.0),0.0d);
+    }
    
-//   @Test
-//   public void test2() {
-//    System.out.println("Test2");
-//   }
-//   
-//   @AfterClass
-//   public static void afterclass() {
-//    System.out.println("AfterClass");
-//   }
+   @Test
+   public void testsub2() {
+    assertEquals(12.0, calc.sub(5.0,-7.0),0.0d);
+    }
+   
+   @Test
+   public void testsub3() {
+    assertEquals(2.0, calc.sub(-5.0,-7.0),0.0d);
+    }
+   
+   @Test
+   public void testmult1() {
+    assertEquals(10.0, calc.mult(5.0,2.0),0.0d);
+    }
+   
+   @Test
+   public void testmult2() {
+    assertEquals(-35.0, calc.mult(5.0,-7.0),0.0d);
+    }
+   
+   @Test
+   public void testmult3() {
+    assertEquals(35.0, calc.mult(-5.0,-7.0),0.0d);
+    }
+   
+   @Test
+   public void testdiv1() {
+    assertEquals(5.0, calc.div(10.0,2.0),0.0d);
+    }
+   
+   @Test
+   public void testdiv2() {
+    assertEquals(-10.0, calc.div(50.0,-5.0),0.0d);
+    }
+   
+   @Test
+   public void testdiv3() {
+    assertEquals(10.0, calc.div(-100.0,-10.0),0.0d);
+    }
+   
    
    }
